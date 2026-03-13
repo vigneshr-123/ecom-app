@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { PiUserCircleLight } from "react-icons/pi";
 import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const Register = () => {
   const navigate=useNavigate()
@@ -40,21 +41,44 @@ const Register = () => {
 }
 
   return (
-    <div className='flex justify-center  pt-1.5 items-center h-screen bg-gradient-to-r from- bg-gray-950 via-gray-900 to-gray-950 bg-cover'>
-      <section>
-      <form onSubmit={handlesubmit} className=' bg-gradient-to-r from-gray-50 via-gray-400   flex flex-col  w-[300px]   text-gray-950 p-6 items-center gap-3 rounded-md  '>
-       <h1> <  PiUserCircleLight className='size-10'/></h1>
-        <div className='flex text-2xl font-light '>Register </div>
-        <input onChange={handleinput} name='name' value={Formdata.name} className='font-light  outline-0 border-2 border-gray-950 p-1 rounded-md ' type="text" placeholder='Enter name...'  />
-        <input onChange={handleinput} name='email' value={Formdata.email} className='font-light  outline-0 border-2 border-gray-950 p-1 rounded-md' type="email" placeholder='Enter email id...' />
-        <input onChange={handleinput} name='password' value={Formdata.password} className='font-light outline-0 border-2 border-gray-950 p-1 rounded-md' type="password" placeholder='New password...' />
+    <div className=' bg-[#FFF4BC] min-h-screen flex items-center '>
 
-       
-        <button  className='bg-gray-900 p-1 text-amber-50 rounded-md w-15 hover:scale-110 transition-all'>save</button>
-     <p className='font-light'>Already have an account?<span className='text-blue-500'> <Link to={'/login'}>Sign in</Link></span></p>
-      </form>
-      </section>
+
+      <div className=''>
+
+
+
+      </div>
       
+      
+      
+      
+      
+      <div className='flex-1 flex  justify-center'>
+
+      
+      
+      <div className='flex pt-1.5 items-center justify-center  p-12 gap-4'>
+      <form onSubmit={handlesubmit} className=' flex flex-col   bg-white shadow-xl rounded-2xl p-15  text-black  items-center gap-3   '>
+       <h1> <  PiUserCircleLight className='size-15'/></h1>
+        <div className='flex text-2xl font-light '>Register </div>
+        <input onChange={handleinput} name='name' value={Formdata.name} className='font-light outline-0  border p-2 rounded-md text-lg ' type="text" placeholder='Enter name...'  />
+        <input onChange={handleinput} name='email' value={Formdata.email} className='font-light outline-0 border  p-2 rounded-md text-lg' type="email" placeholder='Enter email id...' />
+        <input onChange={handleinput} name='password' value={Formdata.password} className='font-light outline-0 border  p-2 rounded-md text-lg' type="password" placeholder='New password...' />
+        <button  className="bg-gray-900 p-2 text-amber-50 rounded-sm hover:scale-110 transition-all" >save</button>
+     <p className='font-light text-lg'>Already have an account?<span className='text-blue-500'> <Link to={'/login'}>Sign in</Link></span></p>
+      </form>
+      </div>
+      </div>
+      
+
+
+
+
+
+
+
+
     </div>
   )
 }

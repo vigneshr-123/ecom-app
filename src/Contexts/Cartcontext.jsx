@@ -12,7 +12,16 @@ import { Link } from 'react-router-dom'
 
 const Cartcontext = createContext()
 export const Cartprovider = ({ children }) => {
-    const [Cart, SetCart] = useState([])
+
+    const [Cart, SetCart] = useState(()=>{
+        const Storedcart=localStorage.getItem('cart')
+        return Storedcart?JSON.parse(Storedcart):[]})
+
+        useEffect(()=>{
+            localStorage.setItem('cart',JSON.stringify(Cart))
+        },[Cart])
+
+
 
     const { User } = useContext(Authcontext)
     const Navigate = useNavigate()
@@ -77,7 +86,7 @@ export const Cartprovider = ({ children }) => {
             return
         }
         SetCart([])
-        toast('Cart cleared🛒')
+        
 
 
 
