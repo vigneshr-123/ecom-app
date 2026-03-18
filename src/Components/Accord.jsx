@@ -2,7 +2,8 @@ import React from 'react'
 
 const Accord = () => {
   return (
-    <div>
+    <div className=' bg-amber-300 flex-1   '>
+    
     
     </div>
   )

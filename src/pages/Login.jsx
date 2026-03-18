@@ -43,7 +43,7 @@ const Login = () => {
 
   return (
 
-    <div className='bg-[#FFF4BC] min-h-screen flex items-center'>
+    <div className='bg-black min-h-screen flex flex-col md:flex-row items-center'>
 
 
       <motion.div
@@ -67,13 +67,16 @@ const Login = () => {
         transition={{ duration: 0.7 }}
         className='flex-1 flex  justify-center'>
         <div className='flex pt-1.5 items-center justify-center     p-12 gap-4'>
-          <form onSubmit={handlesubmit} className=' flex flex-col   bg-white shadow-xl rounded-2xl p-15  text-black  items-center gap-3  '>
-            <h1> <  PiUserCircleLight className='size-15' /></h1>
-            <div className='flex text-2xl font-light   '>Login </div>
-            <input onChange={handleinput} name='email' value={loginData.email} className='font-light outline-0  border p-2 rounded-md text-lg' type="text" placeholder='Enter user id/email...' />
-            <input onChange={handleinput} name='password' value={loginData.password} className=' font-light outline-0 border  p-2 rounded-md text-lg' type="password" placeholder='Enter password...' />
-            <button className='bg-gray-900 p-2 text-amber-50 rounded-sm hover:scale-110 transition-all'>Submit</button>
-            <p className='font-light text-lg'>Don't have an account? <span className=' text-blue-500'><Link to={'/reg'}>Register</Link></span></p>
+          <form onSubmit={handlesubmit} className=' flex flex-col    shadow-xl rounded-2xl p-15  text-white items-center gap-3  '>
+            <div className='flex text-5xl font-light   '>Login </div>
+
+            <p className='font-light text-lg'>Don't have an account? <span className=' text-[#ff5b31] font-bold'><Link to={'/reg'}>Register</Link></span></p>
+
+            <h1> <  PiUserCircleLight className='size-20' /></h1>
+
+            <input onChange={handleinput} name='email' value={loginData.email} className='font-light bg-[#303030] text-white outline-0  md:w-70  p-2 rounded-xl text-lg' type="text" placeholder='Enter user id/email...' />
+            <input onChange={handleinput} name='password' value={loginData.password} className=' font-light bg-[#303030] text-white outline-0  md:w-70  p-2 rounded-xl text-lg ' type="password" placeholder='Enter password...' />
+            <button className="bg-[#ff5b31] p-1 w-20 text-amber-50 rounded-xl hover:scale-110 transition-all font-bold">Submit</button>
           </form>
         </div>
       </motion.div>
