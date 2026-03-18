@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className=' gap-50 flex flex-col  min-h-screen  bg-gray-950 items-center  '>
 
-      <div className='  mt-30 p-7  bg-gradient-to-r from-gray-400  via-gray-700 to-gray-900 w-[70%] justify-center rounded-lg'>
+      <div className='  mt-30 p-7  bg-gradient-to-r from-gray-400  via-gray-700 to-gray-900  justify-center rounded-lg'>
         <h1 className=' flex justify-center text-gray-50 text-[100px] font-[impact]  '> <span className='text-green-500 '>WEL</span>COME  </h1>
         <p className='  flex justify-center text-gray-50 text-4xl animate-pulse font-bold text-blue-600"'>  Explore <span className='text-yellow-400'>Utilize</span> And Bring It Your Own. </p>
       </div>

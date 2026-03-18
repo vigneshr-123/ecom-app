@@ -43,19 +43,28 @@ const Login = () => {
 
   return (
 
-    <div className='bg-black min-h-screen flex flex-col md:flex-row items-center'>
+    <div className='bg-black min-h-screen flex flex-col md:flex-row items-center pt-5'>
 
 
       <motion.div
         initial={{ y: -120, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7 }} className=" flex flex-1 justify-center  ">
-        <div className=' relative p-20 flex flex-col pr-[320px] gap-2 items-center`  w-[650px] rounded-2xl bg-orange-400/20 bg-gradient-to-br from-orange-300 via-orange-400 to-orange-500 backdrop-blur-xl border border-orange-200/30 shadow-2xl shadow-orange-500/30">'>
-          <h1 className='font-[impact] text-7xl'>Welcome,</h1>
+        <div>
+ <div className='  p-5 flex flex- gap-2 items-center`  w-[650px] rounded-2xl bg-orange-400/20 bg-gradient-to-br from-orange-300 via-orange-400 to-orange-500 backdrop-blur-xl border border-orange-200/30 shadow-2xl shadow-orange-500/30">'>
+         
+         <div className='flex flex-col justify-center'>
+           <h1 className='font-[impact] text-7xl'>Welcome,</h1>
           <h2 className='text-3xl font-light'> <span className='text-white font-bold'>Good</span> to have you back</h2>
           <h2 className='font-light text-3xl'>Login to <span className=' font-bold'>explore</span>  more</h2>
-          <img className='absolute bottom-2 right-0 w-[380px] drop-shadow-2xl  ' src="https://static.vecteezy.com/system/resources/thumbnails/035/576/053/small/ai-generated-3d-cartoon-character-a-cute-student-boy-isolated-transparent-background-generated-with-ai-png.png" alt="" />
+
+         </div>
+         
+          <img className=' bottom-2 right-0 w-[380px] drop-shadow-2xl  ' src="https://static.vecteezy.com/system/resources/thumbnails/035/576/053/small/ai-generated-3d-cartoon-character-a-cute-student-boy-isolated-transparent-background-generated-with-ai-png.png" alt="" />
         </div>
+        </div>
+      
+       
       </motion.div>
 
 
